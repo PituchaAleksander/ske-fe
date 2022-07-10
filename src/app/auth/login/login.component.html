@@ -1,0 +1,12 @@
+<div class="login-container">
+    <div class="form-floating mb-3">
+        <label for="floatingInput">Login:</label>
+        <input type="email" class="form-control" id="floatingInput" placeholder="Login" [(ngModel)]="login">
+    </div>
+    <div class="form-floating">
+        <label for="floatingPassword">Password:</label>
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="password">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="apply()">Login in</button>
+    <p class="register" (click)="toRegister()">Register</p>
+</div>

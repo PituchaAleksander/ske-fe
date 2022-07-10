@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Author</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Count</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Add</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let object of data.books">
+        <tr>
+          <td>{{object.book.author}}</td>
+          <td>{{object.book.title}}</td>
+          <td>{{object.book.price}} PLN</td>
+          <td>{{object.count}}</td>
+          <td class="option" (click)="deleteBook(object.book)">delete</td>
+          <td class="option" (click)="addBook(object.book)">add</td>
+        </tr>
+      </ng-container>
+    </tbody>
+</table>
+<div class="cart-footer">
+    <div>Price: {{data.price}} PLN</div>
+    <button type="button" class="btn btn-primary" (click)="clear()">Clear</button>
+    <button type="button" class="btn btn-primary" (click)="buy()">Buy</button>
+</div>

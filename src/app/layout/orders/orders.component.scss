@@ -1,0 +1,23 @@
+tbody{
+    display:block;
+    height: 65vh;
+    overflow:auto;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+.option{
+    cursor: pointer;
+
+    &:hover{
+        color: blue;
+    }
+}
+
+.books{
+    overflow: hidden;
+}

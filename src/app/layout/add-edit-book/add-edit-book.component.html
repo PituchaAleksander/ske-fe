@@ -1,0 +1,15 @@
+<div class="add-edit">
+    <div class="form-floating mb-3">
+        <label for="floatingInput">Title:</label>
+        <input type="text" class="form-control" id="floatingInput" placeholder="Title" [(ngModel)]="data.title">
+    </div>
+    <div class="form-floating">
+        <label for="floatingInput">Author:</label>
+        <input type="text" class="form-control" id="floatingInput" placeholder="Author" [(ngModel)]="data.author">
+    </div>
+    <div class="form-floating">
+        <label for="floatingInput">Price:</label>
+        <input type="number" class="form-control" id="floatingInput" placeholder="Price" [(ngModel)]="data.price">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="apply()">Save</button>
+</div>

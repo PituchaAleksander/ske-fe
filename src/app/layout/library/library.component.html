@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Author</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th *ngIf="authService.getRole()==0" scope="col">Edit</th>
+        <th *ngIf="authService.getRole()==0" scope="col">Delete</th>
+        <th scope="col">Add to cart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let book of data">
+        <tr>
+          <td>{{book.author}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.price}} PLN</td>
+          <td *ngIf="authService.getRole()==0" class="option" (click)="deleteBook(book)">delete</td>
+          <td *ngIf="authService.getRole()==0" class="option" (click)="edit(book)">edit</td>
+          <td class="option" (click)="add(book)">add</td>
+        </tr>
+      </ng-container>
+    </tbody>
+</table>

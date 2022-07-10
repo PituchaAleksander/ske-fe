@@ -1,0 +1,29 @@
+tbody{
+    display:block;
+    height: 58vh;
+    overflow:auto;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+.option{
+    cursor: pointer;
+
+    &:hover{
+        color: blue;
+    }
+}
+
+.btn{
+    width: 200px;
+}
+
+.cart-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

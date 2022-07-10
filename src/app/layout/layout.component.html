@@ -1,0 +1,10 @@
+<div class="header">
+    <div class="header-button logo" (click)="click('/layout/library')"><img class="icon" src="../../assets/img/books.svg" />Library</div>
+    <div class="header-button" *ngIf="authService.getRole()==0" (click)="click('/layout/book')">Add book</div>
+    <div class="header-button" (click)="click('/layout/orders')">Orders</div>
+    <div class="header-button cart" (click)="click('/layout/cart')">Shopping cart</div>
+    <div class="header-button logout" (click)="logout()">Logout</div>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,65 @@
+.header{
+    background-color: rgb(187, 211, 216);
+    width: 100vw;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(166, 166, 166);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo{
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    .icon{
+        height: 50px;
+        padding-right: 10px;
+    }
+
+    .header-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: 400;
+        letter-spacing: 1px;
+        height: 60px;
+        padding: 0 20px;
+        border-left: 1px solid rgb(166, 166, 166);
+
+        &:hover{
+            background-color:rgb(145, 176, 183);
+        }
+
+        &:active{
+            background-color:rgb(122, 151, 157);
+        }
+    }
+
+    .cart{
+        border-right: 1px solid rgb(166, 166, 166);
+    }
+
+    .logout{
+        position: absolute;
+        right: 0;
+        background-color: rgb(164, 192, 197);
+    }
+}
+
+.content{
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 4px;
+    padding: 50px;
+    margin-top: 50px;
+    height: 80vh;
+    width: 80vw;
+    min-width: 800px;
+}
