@@ -5,7 +5,6 @@
         <th scope="col">Price</th>
         <th scope="col">Books</th>
         <th scope="col">Accept</th>
-        <th scope="col">Paid</th>
         <th *ngIf="authService.getRole()==0" scope="col">Accept order</th>
       </tr>
     </thead>
@@ -14,9 +13,8 @@
         <tr>
           <td>{{order.userName}}</td>
           <td>{{order.price}} PLN</td>
-          <td class="books">{{books(order)}}</td>
+          <td class="books">{{showTitles(order)}}</td>
           <td><input type="checkbox" onclick="return false;" [(ngModel)]="order.accept"/></td>
-          <td><input type="checkbox" onclick="return false;" [(ngModel)]="order.paid"/></td>
           <td *ngIf="authService.getRole()==0" class="option" (click)="accept(order)">accept</td>
         </tr>
       </ng-container>

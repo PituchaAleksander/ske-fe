@@ -67,6 +67,7 @@ export class CartComponent implements OnInit {
     )
     .subscribe({
       next: (response) => {
+        window.open(response.url, "_blank");
         this.getData();
       }
     });

@@ -50,12 +50,11 @@ export class OrdersComponent implements OnInit {
     });
   }
 
-  public books(order: any){
+  public showTitles(order: any){
     return order.books.map((b: any)=>b.book.title + " ")
   }
 
   public accept(order: any){
-    console.log(order)
     this.orderService.acceptOrder(order.id)
     .pipe(
       catchError((error) => {
